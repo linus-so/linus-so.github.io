@@ -1,0 +1,75 @@
+body {
+    color: #ffffff;
+}
+
+
+
+/* Sidebar */
+#sidebar {
+    width: 250px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+/* Collapsed state */
+#sidebar.collapsed {
+    width: 70px;
+}
+
+/* Hide text when collapsed */
+#sidebar.collapsed .text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Content positioning */
+#content {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Content shift when collapsed */
+#content.collapsed {
+    margin-left: 70px;
+}
+
+
+.nav-pills .nav-link.active {
+  background-color: #ff8800;
+  color: #000;
+}
+
+.nav-pills .nav-link {
+  color: #ccc;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 136, 0, 0.2);
+  color: #fff;
+}
+
+
+
+.btn-orange {
+  color: #ff8800;
+  border: 1px solid #ff8800;
+  background: transparent;
+}
+
+.btn-orange:hover {
+  background-color: #ff8800;
+  color: #000;
+}
+
+
+.bg-primary {
+    background-color: #ff8800 !important;  /* your new primary color */
+}
+
+.bg-secondary {
+    background-color: rgb(36, 36, 36) !important;
+}
+
+.border-primary {
+    border-color: #ff8800 !important;
+}
