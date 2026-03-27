@@ -11,8 +11,7 @@ document.querySelectorAll('script[type="text/placeholder"]').forEach(script => {
 function placeholderLinesAtScript(currentScript, lineCount = 10, animation = 'glow') {
   const container = document.createElement('div');
   container.className = animation === 'wave' ? 'placeholder-wave' : 'placeholder-glow';
-  container.style.marginBottom = '1rem'; // space between paragraphs
-
+  container.style.marginBottom = '1rem';
   const minWords = 3;
   const maxWords = 6;
 
@@ -22,7 +21,7 @@ function placeholderLinesAtScript(currentScript, lineCount = 10, animation = 'gl
 
     for (let j = 0; j < wordCount; j++) {
       const word = document.createElement('span');
-      const width = Math.floor(Math.random() * 50) + 20; // 20%-70%
+      const width = Math.floor(Math.random() * 50) + 20;
       word.className = 'placeholder';
       word.style.width = width + '%';
       word.style.display = 'inline-block';
