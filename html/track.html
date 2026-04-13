@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track 1</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="gradient-custom m-0">
+
+    <!-- Sidebar -->
+    <div id="navbar"></div>
+
+
+
+    <!-- Body -->
+    <div id="content" class="p-4">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1 id="title"></h1>
+                </div>
+            </div>
+
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <img id="image" class="img-fluid rounded shadow border border-primary" style="max-height: 500px;">
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-8 mx-auto text-center">
+                    <p id="description"></p>
+                    <br>
+                    <p id="longDescription"></p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mx-auto">
+                    <ul class="list-group text-center">
+                        <li class="list-group-item bg-dark text-white">
+                            Laps: <span id="laps"></span>
+                        </li>
+                        <li class="list-group-item bg-dark text-white">
+                            Track Length: <span id="length"></span>
+                        </li>
+                        <li class="list-group-item bg-dark text-white">
+                            First Grand Prix: <span id="firstGP"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/placeholder.js"></script>
+
+
+    <script src="/scripts/data.js"></script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        const track = tracks[id];
+
+        if (track) {
+            document.getElementById("title").textContent = track.title;
+            document.getElementById("image").src = track.image;
+            document.getElementById("description").textContent = track.description;
+            document.getElementById("longDescription").textContent = track.longDescription;
+            document.getElementById("laps").textContent = track.laps;
+            document.getElementById("length").textContent = track.length;
+            document.getElementById("firstGP").textContent = track.firstGP;
+        } else {
+            document.getElementById("title").textContent = "Track not found";
+        }
+    </script>
+
+</body>
+
+</html>
