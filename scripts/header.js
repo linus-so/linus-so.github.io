@@ -10,12 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const content = document.getElementById("content");
 
       if (btn && sidebar && content) {
+        if (window.innerWidth <= 600) {
+          sidebar.classList.add("collapsed");
+          content.classList.add("collapsed");
+        }
+
         btn.addEventListener("click", () => {
           sidebar.classList.toggle("collapsed");
           content.classList.toggle("collapsed");
         });
       }
 
+      const mapsMenu = document.getElementById("mapsMenu");
+      if (mapsMenu && sidebar && content) {
+        mapsMenu.addEventListener("show.bs.collapse", () => {
+          sidebar.classList.remove("collapsed");
+          content.classList.remove("collapsed");
+        });
+      }
 
       const currentPage =
         window.location.pathname.split("/").pop() || "../index.html";

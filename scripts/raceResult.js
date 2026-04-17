@@ -1,4 +1,5 @@
 const tableBody = document.getElementById("raceTable");
+const meeting = 1216;
 
 let driverMap = {};
 
@@ -22,8 +23,8 @@ async function loadDrivers() {
 async function fetchRaceData() {
   try {
     const [posRes, intRes] = await Promise.all([
-      fetch("https://api.openf1.org/v1/position?meeting_key=latest"),
-      fetch("https://api.openf1.org/v1/intervals?meeting_key=latest")
+      fetch(`https://api.openf1.org/v1/position?meeting_key=${meeting}`),
+      fetch(`https://api.openf1.org/v1/intervals?meeting_key=${meeting}`)
     ]);
 
     const positions = await posRes.json();
@@ -91,9 +92,9 @@ function updateTable(positions, intervals) {
 
 
 async function init() {
-  await loadDrivers();      
-  fetchRaceData();          
-  setInterval(fetchRaceData, 10000);
+  await loadDrivers();
+  fetchRaceData();
+  setInterval(fetchRaceData, 3000);
 }
 
 init();

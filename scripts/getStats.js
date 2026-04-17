@@ -6,6 +6,8 @@ function getDriverStats(driverNumber) {
     const teamElement = document.getElementById("team");
     const latestRaceElement = document.getElementById("latestRace");
 
+    const meeting = 1216;
+
     const imageElement = document.getElementById("image");
     if (!nameElement) {
         console.error("Missing #name element in DOM");
