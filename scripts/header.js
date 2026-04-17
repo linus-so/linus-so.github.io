@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // ✅ Active link highlight
       const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+        window.location.pathname.split("/").pop() || "../index.html";
 
       document.querySelectorAll(".nav-link").forEach(link => {
         if (link.getAttribute("href") === currentPage) {
