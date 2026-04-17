@@ -3,7 +3,7 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .hide-on-mobile {
     visibility: hidden;
     display: none;
