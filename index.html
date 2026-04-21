@@ -8,13 +8,21 @@
     <link rel="icon" type="image/png" href="../Images/Icons/f1.png">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
     <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
     <!-- Css -->
     <link rel="stylesheet" href="/styles.css">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </noscript>
+
 </head>
 
 <body class="gradient-custom m-0">
@@ -27,23 +35,23 @@
     <!-- Body -->
     <main id="content" class="p-4">
         <div class="container">
-            
-           
+
+
             <div class="row">
                 <div class="text-center">
                     <h1>Apex Analytics</h1>
                 </div>
             </div>
 
-          
+
             <div class="row">
                 <div class="text-center">
                     <h5>Every stat, for everyone</h5>
                 </div>
             </div>
-        
+
             <br>
-            
+
             <div class="row">
                 <div class="col-1"></div>
 
@@ -51,7 +59,8 @@
                     <h4>Race Results</h4>
                     <br>
                     <p>
-                        Access complete race results with detailed information on finishing positions, lap times, and overall performance. 
+                        Access complete race results with detailed information on finishing positions, lap times, and
+                        overall performance.
                         Follow drivers throughout the season and see how every race impacts the standings.
                     </p>
                     </p>
@@ -104,8 +113,10 @@
                     <h4>Race Stats</h4>
                     <br>
                     <p>
-                        Dive into detailed race statistics, including lap times, sector performance, tire strategies, and consistency data. 
-                        Compare drivers across races and uncover patterns that explain performance over an entire season.
+                        Dive into detailed race statistics, including lap times, sector performance, tire strategies,
+                        and consistency data.
+                        Compare drivers across races and uncover patterns that explain performance over an entire
+                        season.
                     </p>
                 </div>
             </div>
@@ -121,7 +132,7 @@
                     <h4>Videos</h4>
                     <br>
                     <p>
-                        Watch race highlights, full replays, and key moments from every event. 
+                        Watch race highlights, full replays, and key moments from every event.
                         Relive overtakes, incidents, and defining moments with easy access to all video content.
 
                     </p>
