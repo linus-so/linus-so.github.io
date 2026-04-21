@@ -10,10 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const content = document.getElementById("content");
 
       if (btn && sidebar && content) {
-        if (window.innerWidth <= 768) {
-          sidebar.classList.add("collapsed");
-          content.classList.add("collapsed");
-        }
+        
 
         btn.addEventListener("click", () => {
           sidebar.classList.toggle("collapsed");
