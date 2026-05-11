@@ -9,11 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const sidebar = document.getElementById("sidebar");
       const content = document.getElementById("content");
 
+      const tstBtn = document.getElementById("testBtn");
+
       if (btn && sidebar && content) {
-        
+        if (window.innerWidth < 768) {
+          content.classList.add("collapsed");
+        }
+
+        tstBtn.addEventListener("click", () => {
+          content.classList.toggle("collapsed");
+        });
 
         btn.addEventListener("click", () => {
+          
           sidebar.classList.toggle("collapsed");
+          if (window.innerWidth < 768) {
+            return;
+          }
           content.classList.toggle("collapsed");
         });
       }
