@@ -13,7 +13,7 @@ body {
 .gradient-custom {
     min-height: 100vh;
     background: #FF1801;
-    background: linear-gradient(0deg, rgba(255, 24, 1, 1) 0%, rgba(51, 45, 45, 1) 33%);
+    background: linear-gradient(270deg,rgba(255, 24, 1, 1) 0%, rgba(51, 45, 45, 1) 80%);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -24,33 +24,40 @@ body {
     display: none;
 }
 
-/* Sidebar */
-#sidebar {
-    width: 250px;
+#newSidebar {
+    width: 75px;
     transition: width 0.3s ease;
     overflow: hidden;
 }
 
-/* Collapsed state */
-#sidebar.collapsed {
-    width: 70px;
+#newSidebar .text {
+    display: none;
+    opacity: 0;
 }
 
-/* Hide text when collapsed */
+#newSidebar.collapsed {
+    width: 250px;
+}
+
+#newSidebar.collapsed .text {
+    display: inline;
+    opacity: 1;
+}
+
+
 #sidebar.collapsed .text {
     opacity: 0;
     pointer-events: none;
 }
 
-/* Content positioning */
+
 #content {
-    margin-left: 250px;
     transition: margin-left 0.3s ease;
+    margin-left: 75px;
 }
 
-/* Content shift when collapsed */
 #content.collapsed {
-    margin-left: 70px;
+    margin-left: 250px;
 }
 
 
@@ -83,7 +90,7 @@ body {
 
 
 .bg-primary {
-    background-color: #FF1801 !important;  /* your new primary color */
+    background-color: #FF1801 !important;
 }
 
 .bg-secondary {
