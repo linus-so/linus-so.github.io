@@ -11,36 +11,38 @@ document.addEventListener("DOMContentLoaded", () => {
       const mapsMenu = document.getElementById("mapsMenu");
       const mapsBtn = document.getElementById("mapsMenuBtn");
 
+      function toggleSidebar() {
+        sidebar.classList.toggle("collapsed");
+      }
+
 
       if (btn && sidebar && content) {
 
-        btn.addEventListener("click", () => {
-          
-          sidebar.classList.toggle("collapsed");
-          if (window.innerWidth < 768) {
-            return;
-          }
-          content.classList.toggle("collapsed");
-          
-          console.log(mapsMenu.classList)
-
-          
-
+        btn.addEventListener("click", () => {        
+          toggleSidebar();
         });
       }
-
 
       if (mapsMenu && sidebar && content) {
-        mapsMenuBtn.addEventListener("click", () => {
-          
-          
-          sidebar.classList.add("collapsed");
-          if (window.innerWidth < 768) {
-            return;
-          }
-          content.classList.add("collapsed");
-          
+        mapsMenuBtn.addEventListener("click", () => {                   
+          sidebar.classList.add("collapsed");    
         });
       }
+      
+      sidebar.addEventListener("mouseover", () => {
+        if (sidebar.classList.contains("collapsed")) {
+          return;
+        }
+        toggleSidebar();
+      });
+
+      sidebar.addEventListener("mouseout", () => {
+        if (sidebar.classList.contains("collapsed")) {
+          toggleSidebar();
+        }
+        
+      });
+
+
     });
 });

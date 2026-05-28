@@ -37,7 +37,7 @@ async function fetchRaceData() {
   }
 }
 
-// 3. Render table
+
 function updateTable(positions, intervals) {
   const latestPos = {};
   const latestIntervals = {};

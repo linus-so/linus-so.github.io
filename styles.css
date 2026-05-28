@@ -51,9 +51,22 @@ body {
 }
 
 
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
 #content {
     transition: margin-left 0.3s ease;
     margin-left: 75px;
+
+
+}
+
+footer {
+    margin-top: auto;
 }
 
 #content.collapsed {

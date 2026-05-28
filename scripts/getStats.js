@@ -78,12 +78,10 @@ function getLatestRaceStats(driverNumber) {
 
 
 function getSelectedOption() {
-  // Get the dropdown element
   const dropdown = document.getElementById("driverSelect");
-  // Get the selected value and text
-  const value = dropdown.value; // Selected value
-  const text = dropdown.options[dropdown.selectedIndex].text; // Selected text
-  console.log("Selected Value:", value); // Logs "2"
-  console.log("Selected Text:", text);  // Logs "Option 2"
+
+  const value = dropdown.value; 
+  const text = dropdown.options[dropdown.selectedIndex].text;
+
   getDriverStats(value);
 }

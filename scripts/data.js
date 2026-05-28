@@ -1,5 +1,3 @@
-// /scripts/data.js
-
 const tracks = {
     1: {
         title: "Bahrain Grand Prix",
