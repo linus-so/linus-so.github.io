@@ -10,9 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const content = document.getElementById("content");
       const mapsMenu = document.getElementById("mapsMenu");
       const mapsBtn = document.getElementById("mapsMenuBtn");
+      var sidebarLocked = false;
 
       function toggleSidebar() {
         sidebar.classList.toggle("collapsed");
+      }
+
+      function onDesktop() {
+        return window.innerWidth >= 769;
       }
 
 
@@ -20,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btn.addEventListener("click", () => {        
           toggleSidebar();
+          console.log("Clicked")
         });
+
+        
       }
 
       if (mapsMenu && sidebar && content) {
@@ -28,21 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
           sidebar.classList.add("collapsed");    
         });
       }
+
       
-      sidebar.addEventListener("mouseover", () => {
-        if (sidebar.classList.contains("collapsed")) {
-          return;
-        }
-        toggleSidebar();
-      });
+      
+        sidebar.addEventListener("mouseover", () => {
+          if (onDesktop() && !sidebar.classList.contains("collapsed")) {
+            toggleSidebar();
+          }
 
-      sidebar.addEventListener("mouseout", () => {
-        if (sidebar.classList.contains("collapsed")) {
-          toggleSidebar();
-        }
+        });
+
+        sidebar.addEventListener("mouseout", () => {
+          if (onDesktop() && sidebar.classList.contains("collapsed")) {
+            toggleSidebar();
+
+          }
+
+        });
         
-      });
-
 
     });
 });
