@@ -8,8 +8,6 @@ body {
     visibility: hidden;
     display: none;
   }
-
-
 }
 
 @media screen and (min-width: 769px) {
@@ -18,6 +16,10 @@ body {
         display: none;
     }
 }
+
+#footer {
+    margin-left:75px;
+  }
 
 .gradient-custom {
     min-height: 100vh;
@@ -42,6 +44,7 @@ body {
 #newSidebar .text {
     display: none;
     opacity: 0;
+    
 }
 
 #newSidebar.collapsed {
@@ -76,10 +79,6 @@ body {
 
 footer {
     margin-top: auto;
-}
-
-#content.collapsed {
-    margin-left: 250px;
 }
 
 
